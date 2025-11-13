@@ -1,0 +1,55 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+coverage/
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.development
+.env.staging
+.env.secrets
+
+# IDE files
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# TypeScript build cache
+*.tsbuildinfo
+
+# Temp folders
+.tmp/
+temp/
+cache/
+
+# ESLint cache
+.eslintcache
+
+# Secrets / scripts
+sync_github_env_secrets.sh
+.npmrc
+
+# TypeORM migration JS files
+src/migrations/*.js
+!src/migrations/*.ts
+
+# PM2 runtime files
+.pids
+*.pid
+*.seed
+*.pid.lock
