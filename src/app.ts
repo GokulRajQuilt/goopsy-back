@@ -3,7 +3,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import express, { NextFunction } from "express";
 import * as api from "./api";
-import { AppDataSource } from "./pg-config";
+import { AppDataSource } from "./config/pg-config";
 import * as settings from "./settings";
 
 export async function createServer() {

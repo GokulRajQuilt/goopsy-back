@@ -5,7 +5,12 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "typeorm": "typeorm-ts-node-commonjs",
+    "migration:generate": "npm run typeorm migration:generate -- src/migrations --dataSource src/config/pg-config.ts",
+    "migration:run": "npm run typeorm migration:run --dataSource src/config/pg-config.ts",
+    "migration:revert": "npm run typeorm migration:revert --dataSource src/config/pg-config.ts",
+    "mg": "sh -c 'npm run typeorm migration:generate -- src/migrations/$1 --dataSource src/config/pg-config.ts' --"
   },
   "keywords": [],
   "author": "",
@@ -18,8 +23,7 @@
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
-    "pg": "^8.16.3",
-    "typeorm": "^0.3.27"
+    "pg": "^8.16.3"
   },
   "devDependencies": {
     "@types/bcrypt": "^6.0.0",
@@ -29,6 +33,7 @@
     "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^24.10.1",
     "ts-node-dev": "^2.0.0",
+    "typeorm": "^0.3.27",
     "typescript": "^5.9.3"
   }
 }

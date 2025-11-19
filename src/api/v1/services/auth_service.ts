@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { AppDataSource } from "../../../pg-config";
+import { AppDataSource } from "../../../config/pg-config";
 import { User } from "../models/user_details_model";
 
 export class AuthService {
